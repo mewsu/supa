@@ -1,0 +1,3 @@
+psql -h db.geuybhttvrmvkbezzlmk.supabase.co -p 5432 -d postgres -U postgres
+
+4v0FcO2k1!
