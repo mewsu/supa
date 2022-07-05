@@ -36,11 +36,6 @@ const ListedHome = (home = null) => {
     }
   };
 
-  // Fallback version
-  if (router.isFallback) {
-    return "Loading...";
-  }
-
   const { data: session } = useSession();
   const [isOwner, setIsOwner] = useState(false);
 
@@ -56,6 +51,11 @@ const ListedHome = (home = null) => {
       }
     })();
   }, [session?.user]);
+
+  // Fallback version
+  if (router.isFallback) {
+    return "Loading...";
+  }
 
   return (
     <Layout>
